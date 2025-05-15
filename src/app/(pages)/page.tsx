@@ -8,6 +8,8 @@ export default function Home() {
       <Link href="/full-csr">Full CSR Page</Link>
       <Link href="/ssr-component-in-csr-component">SSR Component in CSR Component</Link>
       <Link href="/csr-component-in-ssr-component">CSR Component in SSR Component</Link>
+      <Link href="/import-ssr-function-into-client-component-issue">Import SSR Function into Client Component Issue</Link>
+      <Link href="/import-ssr-function-into-client-component-solution">Import SSR Function into Client Component Solution</Link>
     </div>
   );
 }
