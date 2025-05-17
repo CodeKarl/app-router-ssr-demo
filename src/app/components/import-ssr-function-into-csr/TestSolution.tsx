@@ -9,12 +9,12 @@
 
 import React from 'react'
 
-async function Test({ Component }: { Component: React.ComponentType }) {
+async function TestSolution({ children }: { children: React.ReactNode }) {
   return (
     <div>
-        <Component />
+        {children}
     </div>
   )
 } 
 
-export default Test
+export default TestSolution

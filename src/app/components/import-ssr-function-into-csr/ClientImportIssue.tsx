@@ -1,10 +1,11 @@
 import dynamic from "next/dynamic";
 import Test from "./Test";
+import TestSolution from "./TestSolution";
 
 export default function ClientImportIssue() {
   
   const CSRComponent = dynamic(() => import("../csr/csr-component"), {
-    ssr: false,
+    ssr: true,
   });
 
   const SSRComponent = dynamic(() => import("../ssr/ssr-get-data"), {
@@ -14,12 +15,18 @@ export default function ClientImportIssue() {
   return (
     <div>
       <h1>This page attempts to use a server function in a Client Component</h1>
-      <CSRComponent />
-
       {/* This will cause the Next.js error you described when Test is SSR */}
-      <Test Component={CSRComponent} />
+      {/* <Test Component={CSRComponent} />
 
-      <Test Component={SSRComponent} />
+      <Test Component={SSRComponent} /> */}
+
+      <TestSolution>
+        <CSRComponent />
+      </TestSolution>
+
+      <TestSolution>
+        <SSRComponent />
+      </TestSolution>
     </div>
   );
 }
