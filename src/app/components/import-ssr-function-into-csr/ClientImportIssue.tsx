@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Test from "./Test";
 import TestSolution from "./TestSolution";
+import BlockListExample from "./block-list-example";
 
 export default function ClientImportIssue() {
   
